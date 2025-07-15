@@ -1,0 +1,9 @@
+build
+coverage
+node_modules
+public
+.eslintignore
+.next
+.prettierignore
+.stylelintignore
+*.log
