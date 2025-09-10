@@ -19,6 +19,6 @@ const prettierConfig = {
   tabWidth: 2,
   trailingComma: "es5",
   useTabs: false,
-};
+}
 
-export default prettierConfig;
+export default prettierConfig
