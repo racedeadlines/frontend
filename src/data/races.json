@@ -1,0 +1,140 @@
+[
+  {
+    "name": "BMW BERLIN-MARATHON",
+    "location": "🇩🇪 Berlin, Germany",
+    "url": "https://www.bmw-berlin-marathon.com/en/",
+    "img": "/berlin.webp",
+    "raceDate": "2025-09-21T07:15:00.000Z",
+    "registration": [
+      {
+        "type": "time-qualifier",
+        "openDate": "2024-10-07T00:00:00.000Z",
+        "closeDate": "2024-11-21T00:00:00.000Z"
+      },
+      {
+        "type": "general-lottery",
+        "openDate": "2024-10-07T00:00:00.000Z",
+        "closeDate": "2024-11-21T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "name": "Boston Marathon",
+    "location": "🇺🇸 Boston, MA, United States",
+    "url": "https://www.baa.org/races/boston-marathon",
+    "img": "/boston.webp",
+    "raceDate": "2026-04-20T13:37:00.000Z",
+    "registration": [
+      {
+        "type": "time-qualifier",
+        "openDate": "2025-09-08T14:00:00.000Z",
+        "closeDate": "2025-09-12T21:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "name": "Bank of America Chicago Marathon",
+    "location": "🇺🇸 Chicago, IL, United States",
+    "url": "https://www.chicagomarathon.com/",
+    "img": "/chicago.webp",
+    "raceDate": "2025-10-12T12:20:00.000Z",
+    "registration": [
+      {
+        "type": "time-qualifier",
+        "openDate": "2024-10-22T00:00:00.000Z",
+        "closeDate": "2024-11-21T00:00:00.000Z"
+      },
+      {
+        "type": "general-lottery",
+        "openDate": "2024-10-22T00:00:00.000Z",
+        "closeDate": "2024-11-21T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "name": "TCS London Marathon",
+    "location": "🇬🇧 London, United Kingdom",
+    "url": "https://www.londonmarathonevents.co.uk/london-marathon",
+    "img": "/london.webp",
+    "raceDate": "2026-04-26T07:50:00.000Z",
+    "registration": [
+      {
+        "type": "championship",
+        "openDate": "",
+        "closeDate": ""
+      },
+      {
+        "type": "good-for-age",
+        "openDate": "",
+        "closeDate": ""
+      },
+      {
+        "type": "general-lottery",
+        "openDate": "2025-04-25T00:00:00.000Z",
+        "closeDate": "2025-05-02T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "name": "TCS New York City Marathon",
+    "location": "🇺🇸 New York, NY, United States",
+    "url": "https://www.tcsnycmarathon.org/",
+    "img": "/nyc.webp",
+    "raceDate": "2025-11-02T13:00:00.000Z",
+    "registration": [
+      {
+        "type": "time-qualifier",
+        "openDate": "2024-02-28T00:00:00.000Z",
+        "closeDate": "2024-02-21T00:00:00.000Z"
+      },
+      {
+        "type": "general-lottery",
+        "openDate": "2024-02-28T00:00:00.000Z",
+        "closeDate": "2024-03-21T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "name": "TCS Sydney Marathon",
+    "location": "🇦🇺 Sydney, Australia",
+    "url": "https://www.tcssydneymarathon.com/",
+    "img": "/sydney.webp",
+    "raceDate": "2026-08-30T20:30:00.000Z",
+    "registration": [
+      {
+        "type": "time-qualifier",
+        "openDate": "2025-09-24T00:00:00.000Z",
+        "closeDate": "2025-10-17T12:59:00.000Z"
+      },
+      {
+        "type": "general-lottery",
+        "openDate": "2025-09-24T00:00:00.000Z",
+        "closeDate": "2025-10-17T12:59:00.000Z"
+      }
+    ]
+  },
+  {
+    "name": "Tokyo Marathon",
+    "location": "🇯🇵 Tokyo, Japan",
+    "url": "https://www.marathon.tokyo/en/",
+    "img": "/tokyo.webp",
+    "raceDate": "2026-02-28T23:00:00.000Z",
+    "registration": [
+      {
+        "type": "time-qualifier",
+        "openDate": "2025-08-01T00:00:00.000Z",
+        "closeDate": "2025-08-14T00:00:00.000Z"
+      },
+      {
+        "type": "one-tokyo-global-member",
+        "openDate": "2025-08-01T00:00:00.000Z",
+        "closeDate": "2025-08-14T00:00:00.000Z"
+      },
+      {
+        "type": "general-lottery",
+        "openDate": "2025-08-15T00:00:00.000Z",
+        "closeDate": "2025-08-29T00:00:00.000Z"
+      }
+    ]
+  }
+]

@@ -1,0 +1,117 @@
+[
+  {
+    "name": "Demo Marathon - Opens Soon",
+    "location": "🇺🇸 Demo City, United States",
+    "url": "https://example.com",
+    "img": "/berlin.webp",
+    "raceDate": "2026-01-15T00:00:00.000Z",
+    "registration": [
+      {
+        "type": "time-qualifier",
+        "openDate": "2025-09-20T14:00:00.000Z",
+        "closeDate": "2025-10-10T21:00:00.000Z"
+      },
+      {
+        "type": "general-lottery",
+        "openDate": "2025-09-25T14:00:00.000Z",
+        "closeDate": "2025-10-15T21:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "name": "Demo Marathon - Open",
+    "location": "🇺🇸 Demo City, United States",
+    "url": "https://example.com",
+    "img": "/boston.webp",
+    "raceDate": "2026-02-15T00:00:00.000Z",
+    "registration": [
+      {
+        "type": "time-qualifier",
+        "openDate": "2025-08-15T14:00:00.000Z",
+        "closeDate": "2025-09-05T21:00:00.000Z"
+      },
+      {
+        "type": "championship",
+        "openDate": "2025-08-20T14:00:00.000Z",
+        "closeDate": "2025-09-10T21:00:00.000Z"
+      },
+      {
+        "type": "general-lottery",
+        "openDate": "2025-09-01T14:00:00.000Z",
+        "closeDate": "2025-10-15T21:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "name": "Demo Marathon - Closing Soon",
+    "location": "🇺🇸 Demo City, United States",
+    "url": "https://example.com",
+    "img": "/chicago.webp",
+    "raceDate": "2026-03-15T00:00:00.000Z",
+    "registration": [
+      {
+        "type": "good-for-age",
+        "openDate": "2025-07-15T14:00:00.000Z",
+        "closeDate": "2025-08-30T21:00:00.000Z"
+      },
+      {
+        "type": "general-lottery",
+        "openDate": "2025-08-01T14:00:00.000Z",
+        "closeDate": "2025-09-18T21:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "name": "Demo Marathon - Closed",
+    "location": "🇺🇸 Demo City, United States",
+    "url": "https://example.com",
+    "img": "/nyc.webp",
+    "raceDate": "2026-04-15T00:00:00.000Z",
+    "registration": [
+      {
+        "type": "time-qualifier",
+        "openDate": "2025-06-01T14:00:00.000Z",
+        "closeDate": "2025-07-15T21:00:00.000Z"
+      },
+      {
+        "type": "one-tokyo-global-member",
+        "openDate": "2025-06-15T14:00:00.000Z",
+        "closeDate": "2025-08-01T21:00:00.000Z"
+      },
+      {
+        "type": "general-lottery",
+        "openDate": "2025-07-01T14:00:00.000Z",
+        "closeDate": "2025-09-01T21:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "name": "Demo Marathon - To Be Announced",
+    "location": "🇺🇸 Demo City, United States",
+    "url": "https://example.com",
+    "img": "/sydney.webp",
+    "raceDate": "2026-05-15T00:00:00.000Z",
+    "registration": [
+      {
+        "type": "time-qualifier",
+        "openDate": "",
+        "closeDate": ""
+      },
+      {
+        "type": "championship",
+        "openDate": "",
+        "closeDate": ""
+      },
+      {
+        "type": "good-for-age",
+        "openDate": "",
+        "closeDate": ""
+      },
+      {
+        "type": "general-lottery",
+        "openDate": "",
+        "closeDate": ""
+      }
+    ]
+  }
+]

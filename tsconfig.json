@@ -20,10 +20,10 @@
     ],
     "baseUrl": "./src",
     "paths": {
-      "@layout/*": ["./components/layout/*"],
-      "@components/*": ["./components/*"],
-      "@images/*": ["../images/*"],
-      "@styles/*": ["./styles/*"]
+      "@layout/*": ["components/layout/*"],
+      "@components/*": ["components/*"],
+      "@data/*": ["data/*"],
+      "@styles/*": ["styles/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
