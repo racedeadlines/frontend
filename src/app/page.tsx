@@ -6,8 +6,8 @@ import { api, RaceEvent } from "@lib/api"
 import { raceData } from "@data/types"
 
 export const metadata: Metadata = {
-  title: "MarathonTrack.com | Home",
-  description: "Track your next marathon registration.",
+  title: "Race Poke",
+  description: "Text reminders to register for your next race.",
 }
 
 export default async function HomePage() {
@@ -23,10 +23,10 @@ export default async function HomePage() {
       <div className="mx-auto w-full max-w-6xl px-4">
         <header>
           <h1 className="text-xl font-semibold">
-            Track your next marathon race.
+            Text reminders to register for your next race.
           </h1>
         </header>
-        <section className="sticky top-0 z-10 bg-white py-4 dark:bg-neutral-900">
+        <section className="py-4">
           <SearchFilter />
         </section>
         <section className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

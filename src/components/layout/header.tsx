@@ -5,7 +5,7 @@ import MenuIcon from "./ui/menu-icon"
 
 export default function Header() {
   return (
-    <header className="flex justify-between p-4">
+    <header className="sticky top-0 z-20 flex justify-between bg-white p-4 dark:bg-neutral-900">
       <Link href="/" className="flex w-fit items-end space-x-2">
         <Logo />
       </Link>
