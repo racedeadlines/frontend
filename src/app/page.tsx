@@ -2,7 +2,7 @@ import { Metadata } from "next"
 
 import EventCard from "@components/event/event-card"
 import SearchFilter from "@components/event/search-filter"
-import { api, RaceEvent } from "@/lib/api"
+import { api, RaceEvent } from "@lib/api"
 import { raceData } from "@data/types"
 
 export const metadata: Metadata = {
