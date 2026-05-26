@@ -93,7 +93,7 @@ export default function EventCard({ event }: EventCardProps) {
             </div>
           )}
           <div className="flex items-center justify-between rounded-lg bg-black/75 px-3 py-2">
-            <div className="font-mono text-sm text-white">
+            <div className="text-sm text-white">
               {activeRegistration
                 ? activeRegistration.type.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")
                 : "Registration Closed"}
