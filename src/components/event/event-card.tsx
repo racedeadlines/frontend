@@ -6,7 +6,6 @@ import { RaceEvent } from "data/types"
 import { api } from "@lib/api"
 
 import FlagCheckered from "./icons/flag-checkered"
-import EventCountdown from "./event-countdown"
 import RegistrationStatus from "./registration-status"
 
 type EventCardProps = {
@@ -84,9 +83,15 @@ export default function EventCard({ event }: EventCardProps) {
               <h2 className="text-sm text-neutral-300">{event.location}</h2>
             </div>
           </div>
-          <EventCountdown
-            eventDate={activeRegistration?.closeDate || event.raceDate}
-          />
+          {activeRegistration?.closeDate && (
+            <div className="rounded-lg bg-black/60 px-3 py-2 text-xs text-neutral-300">
+              Closes {new Date(activeRegistration.closeDate).toLocaleDateString([], {
+                month: "short",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </div>
+          )}
           <div className="flex items-center justify-between rounded-lg bg-black/75 px-3 py-2">
             <div className="font-mono text-sm text-white">
               {activeRegistration
