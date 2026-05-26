@@ -29,7 +29,7 @@ export default async function HomePage() {
         <section className="sticky top-0 z-10 bg-gradient-to-b from-white via-white/75 to-transparent py-4 dark:from-neutral-900 dark:via-neutral-900/75">
           <SearchFilter />
         </section>
-        <section className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <section className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {sorted.map((event: RaceEvent) => (
             <EventCard key={event.name} event={event} />
           ))}

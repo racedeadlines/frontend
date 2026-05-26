@@ -50,7 +50,7 @@ export default function EventCard({ event }: EventCardProps) {
         className="flex flex-col bg-cover bg-center"
         style={{ backgroundImage: `url(${event.img})` }}
       >
-        <div className="space-y-2 bg-black/30 p-2 backdrop-invert backdrop-opacity-10">
+        <div className="flex min-h-64 flex-col justify-between space-y-2 bg-black/30 p-2 backdrop-invert backdrop-opacity-10">
           <div className="flex justify-between">
             <span className="flex w-fit items-center space-x-2 rounded-full bg-black/60 px-2 py-1 text-xs text-white">
               <FlagCheckered />
