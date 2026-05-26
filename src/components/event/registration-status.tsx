@@ -49,7 +49,7 @@ export default function RegistrationStatus({
   }
 
   const iconClassName = clsx("size-2 rounded-full border", iconColor)
-  const textClassName = clsx("font-mono", textColor)
+  const textClassName = clsx(textColor)
   return (
     <div className="flex items-center space-x-2 text-sm">
       <div className={iconClassName} />
