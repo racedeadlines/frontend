@@ -1,8 +1,9 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import clsx from "clsx"
 import { EventRegistrationOptions, RaceEvent } from "data/types"
+import { api } from "@lib/api"
 
 import ChevronDown from "./icons/chevron-down"
 import FlagCheckered from "./icons/flag-checkered"
@@ -15,6 +16,31 @@ type EventCardProps = {
 
 export default function EventCard({ event }: EventCardProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [alerted, setAlerted] = useState<boolean>(false)
+  const [alertLoading, setAlertLoading] = useState<boolean>(false)
+
+  useEffect(() => {
+    api.reminders.getAll()
+      .then(reminders => setAlerted(reminders.some(r => r.race_id === event.id)))
+      .catch(() => {})
+  }, [event.id])
+
+  const toggleAlert = async () => {
+    setAlertLoading(true)
+    try {
+      if (alerted) {
+        await api.reminders.delete(event.id)
+        setAlerted(false)
+      } else {
+        await api.reminders.create(event.id)
+        setAlerted(true)
+      }
+    } catch {
+      // not logged in or error — silently ignore for now
+    } finally {
+      setAlertLoading(false)
+    }
+  }
 
   // Check if registration is still open (not past close date)
   const isRegistrationOpen = (registration: EventRegistrationOptions) => {
@@ -102,9 +128,18 @@ export default function EventCard({ event }: EventCardProps) {
                 })}
               </span>
             </span>
-            <span className="w-fit rounded-full bg-black/60 px-2 py-1 text-xs text-white">
-              + Track
-            </span>
+            <button
+              onClick={toggleAlert}
+              disabled={alertLoading}
+              className={clsx(
+                "w-fit rounded-full px-2 py-1 text-xs transition-colors",
+                alerted
+                  ? "bg-white/90 text-black"
+                  : "bg-black/60 text-white hover:bg-black/80"
+              )}
+            >
+              {alerted ? "🔔 Alerted" : "🔕 Alert me"}
+            </button>
           </div>
           <div className="flex space-x-2">
             <div className="flex flex-1 flex-col rounded-lg bg-black/60 p-2">

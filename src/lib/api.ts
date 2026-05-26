@@ -1,6 +1,11 @@
 const BASE_URL =
   process.env.NEXT_PUBLIC_API_URL ?? "https://api-service-ac2r6xiana-uc.a.run.app/api/v1"
 
+function getToken(): string | null {
+  if (typeof window === "undefined") return null
+  return localStorage.getItem("token")
+}
+
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
   const res = await fetch(`${BASE_URL}${path}`, {
     headers: { "Content-Type": "application/json" },
@@ -13,6 +18,34 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
   }
 
   return res.json()
+}
+
+async function authRequest<T>(path: string, options?: RequestInit): Promise<T> {
+  const token = getToken()
+  return request<T>(path, {
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      ...(options?.headers ?? {}),
+    },
+  })
+}
+
+export type EventRegistrationOption = {
+  type: string
+  openDate: string
+  closeDate: string
+}
+
+export type RaceEvent = {
+  id: number
+  name: string
+  location: string
+  url: string
+  img: string
+  raceDate: string
+  registration: EventRegistrationOption[]
 }
 
 export type User = {
@@ -28,24 +61,26 @@ export type AuthResponse = {
   user: User
 }
 
-export type EventRegistrationOption = {
-  type: string
-  openDate: string
-  closeDate: string
-}
-
-export type RaceEvent = {
-  name: string
-  location: string
-  url: string
-  img: string
-  raceDate: string
-  registration: EventRegistrationOption[]
+export type Reminder = {
+  id: number
+  user_id: number
+  race_id: number
+  created_at: string
 }
 
 export const api = {
   races: {
     getAll: () => request<RaceEvent[]>("/races"),
+  },
+  reminders: {
+    getAll: () => authRequest<Reminder[]>("/reminders"),
+    create: (raceId: number) =>
+      authRequest<Reminder>("/reminders", {
+        method: "POST",
+        body: JSON.stringify({ race_id: raceId }),
+      }),
+    delete: (raceId: number) =>
+      authRequest<void>(`/reminders/${raceId}`, { method: "DELETE" }),
   },
   auth: {
     sendOTP: (phone: string) =>
