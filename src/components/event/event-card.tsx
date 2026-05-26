@@ -77,7 +77,7 @@ export default function EventCard({ event }: EventCardProps) {
           </div>
           <div className="flex space-x-2">
             <div className="flex flex-1 flex-col rounded-lg bg-black/60 p-2">
-              <h1 className="truncate text-lg font-semibold text-white">
+              <h1 className="text-lg font-semibold text-white">
                 {event.name}
               </h1>
               <h2 className="text-sm text-neutral-300">{event.location}</h2>

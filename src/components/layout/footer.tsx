@@ -8,7 +8,7 @@ export default function Footer() {
 
   return (
     <footer className="p-4 dark:bg-neutral-900">
-      <div className="mx-auto flex w-full max-w-4xl flex-col space-y-4">
+      <div className="mx-auto flex w-full max-w-6xl flex-col space-y-4">
         <Link href="/" className="flex w-fit items-end space-x-4">
           <Logo />
           <span className="text-2xl font-semibold italic">MarathonTrack</span>
