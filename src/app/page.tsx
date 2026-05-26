@@ -19,7 +19,7 @@ export default async function HomePage() {
   )
 
   return (
-    <main className="flex h-full w-full flex-1 flex-col pt-6 pb-16">
+    <main className="flex h-full w-full flex-1 flex-col pt-10 pb-16">
       <div className="mx-auto w-full max-w-6xl px-4">
         <header>
           <h1 className="text-xl font-semibold">
