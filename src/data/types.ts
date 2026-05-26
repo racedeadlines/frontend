@@ -1,19 +1,7 @@
-import demoJSON from "@data/demo.json"
 import raceJSON from "@data/races.json"
+import { RaceEvent } from "@/lib/api"
 
-export type EventRegistrationOptions = {
-  type: string
-  openDate: string
-  closeDate: string
-}
+export type { RaceEvent }
+export type { EventRegistrationOption as EventRegistrationOptions } from "@/lib/api"
 
-export type RaceEvent = {
-  name: string
-  location: string
-  url: string
-  img: string
-  raceDate: string
-  registration: EventRegistrationOptions[]
-}
-
-export const raceData: RaceEvent[] = raceJSON
+export const raceData: RaceEvent[] = raceJSON as RaceEvent[]

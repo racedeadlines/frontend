@@ -28,7 +28,25 @@ export type AuthResponse = {
   user: User
 }
 
+export type EventRegistrationOption = {
+  type: string
+  openDate: string
+  closeDate: string
+}
+
+export type RaceEvent = {
+  name: string
+  location: string
+  url: string
+  img: string
+  raceDate: string
+  registration: EventRegistrationOption[]
+}
+
 export const api = {
+  races: {
+    getAll: () => request<RaceEvent[]>("/races"),
+  },
   auth: {
     sendOTP: (phone: string) =>
       request<{ message: string; phone: string }>("/auth/send-otp", {

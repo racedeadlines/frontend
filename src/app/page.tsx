@@ -2,16 +2,18 @@ import { Metadata } from "next"
 
 import EventCard from "@components/event/event-card"
 import SearchFilter from "@components/event/search-filter"
-
-import { raceData, RaceEvent } from "@data/types"
+import { api, RaceEvent } from "@/lib/api"
+import { raceData } from "@data/types"
 
 export const metadata: Metadata = {
   title: "MarathonTrack.com | Home",
   description: "Track your next marathon registration.",
 }
 
-export default function HomePage() {
-  const sortBy = raceData.sort(
+export default async function HomePage() {
+  const races = await api.races.getAll().catch(() => raceData)
+
+  const sorted = [...races].sort(
     (a: RaceEvent, b: RaceEvent) =>
       new Date(a.raceDate).getTime() - new Date(b.raceDate).getTime()
   )
@@ -27,7 +29,7 @@ export default function HomePage() {
         <SearchFilter />
       </section>
       <section className="flex flex-col space-y-4 px-4">
-        {sortBy.map((event: RaceEvent) => (
+        {sorted.map((event: RaceEvent) => (
           <EventCard key={event.name} event={event} />
         ))}
       </section>
