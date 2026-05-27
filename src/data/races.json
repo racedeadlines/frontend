@@ -1,10 +1,15 @@
 [
   {
-    "name": "BMW BERLIN-MARATHON",
-    "location": "🇩🇪 Berlin, Germany",
+    "name": "BMW Berlin Marathon",
+    "distance": "marathon",
+    "city": "Berlin",
+    "state": "",
+    "country": "Germany",
+    "price": null,
     "url": "https://www.bmw-berlin-marathon.com/en/",
     "img": "/berlin.webp",
     "raceDate": "2025-09-21T07:15:00.000Z",
+    "tags": ["Abbott World Marathon Major"],
     "registration": [
       {
         "type": "time-qualifier",
@@ -20,10 +25,15 @@
   },
   {
     "name": "Boston Marathon",
-    "location": "🇺🇸 Boston, MA, United States",
+    "distance": "marathon",
+    "city": "Boston",
+    "state": "MA",
+    "country": "",
+    "price": null,
     "url": "https://www.baa.org/races/boston-marathon",
     "img": "/boston.webp",
     "raceDate": "2026-04-20T13:37:00.000Z",
+    "tags": ["Abbott World Marathon Major"],
     "registration": [
       {
         "type": "time-qualifier",
@@ -34,10 +44,15 @@
   },
   {
     "name": "Bank of America Chicago Marathon",
-    "location": "🇺🇸 Chicago, IL, United States",
+    "distance": "marathon",
+    "city": "Chicago",
+    "state": "IL",
+    "country": "",
+    "price": null,
     "url": "https://www.chicagomarathon.com/",
     "img": "/chicago.webp",
     "raceDate": "2025-10-12T12:20:00.000Z",
+    "tags": ["Abbott World Marathon Major"],
     "registration": [
       {
         "type": "time-qualifier",
@@ -53,10 +68,15 @@
   },
   {
     "name": "TCS London Marathon",
-    "location": "🇬🇧 London, United Kingdom",
+    "distance": "marathon",
+    "city": "London",
+    "state": "",
+    "country": "United Kingdom",
+    "price": null,
     "url": "https://www.londonmarathonevents.co.uk/london-marathon",
     "img": "/london.webp",
     "raceDate": "2026-04-26T07:50:00.000Z",
+    "tags": ["Abbott World Marathon Major"],
     "registration": [
       {
         "type": "championship",
@@ -77,10 +97,15 @@
   },
   {
     "name": "TCS New York City Marathon",
-    "location": "🇺🇸 New York, NY, United States",
+    "distance": "marathon",
+    "city": "New York",
+    "state": "NY",
+    "country": "",
+    "price": null,
     "url": "https://www.tcsnycmarathon.org/",
     "img": "/nyc.webp",
     "raceDate": "2025-11-02T13:00:00.000Z",
+    "tags": ["Abbott World Marathon Major", "9+1"],
     "registration": [
       {
         "type": "time-qualifier",
@@ -96,10 +121,15 @@
   },
   {
     "name": "TCS Sydney Marathon",
-    "location": "🇦🇺 Sydney, Australia",
+    "distance": "marathon",
+    "city": "Sydney",
+    "state": "",
+    "country": "Australia",
+    "price": null,
     "url": "https://www.tcssydneymarathon.com/",
     "img": "/sydney.webp",
     "raceDate": "2026-08-30T20:30:00.000Z",
+    "tags": [],
     "registration": [
       {
         "type": "time-qualifier",
@@ -115,10 +145,15 @@
   },
   {
     "name": "Tokyo Marathon",
-    "location": "🇯🇵 Tokyo, Japan",
+    "distance": "marathon",
+    "city": "Tokyo",
+    "state": "",
+    "country": "Japan",
+    "price": null,
     "url": "https://www.marathon.tokyo/en/",
     "img": "/tokyo.webp",
     "raceDate": "2026-02-28T23:00:00.000Z",
+    "tags": ["Abbott World Marathon Major"],
     "registration": [
       {
         "type": "time-qualifier",

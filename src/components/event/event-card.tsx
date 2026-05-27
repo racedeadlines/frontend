@@ -12,6 +12,16 @@ type EventCardProps = {
   event: RaceEvent
 }
 
+function formatLocation(event: RaceEvent): string {
+  if (event.state) return `${event.city}, ${event.state}`
+  if (event.country) return `${event.city}, ${event.country}`
+  return event.city
+}
+
+function formatType(type: string): string {
+  return type.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")
+}
+
 export default function EventCard({ event }: EventCardProps) {
   const [alerted, setAlerted] = useState<boolean>(false)
   const [alertLoading, setAlertLoading] = useState<boolean>(false)
@@ -19,7 +29,7 @@ export default function EventCard({ event }: EventCardProps) {
   useEffect(() => {
     api.reminders.getAll()
       .then(reminders => setAlerted(reminders.some(r => r.race_id === event.id)))
-      .catch(() => {})
+      .catch(() => { })
   }, [event.id])
 
   const toggleAlert = async () => {
@@ -66,23 +76,41 @@ export default function EventCard({ event }: EventCardProps) {
               onClick={toggleAlert}
               disabled={alertLoading}
               className={clsx(
-                "w-fit rounded-full px-2 py-1 text-xs transition-colors",
+                "w-fit cursor-pointer rounded-full px-2 py-1 text-xs transition-colors",
                 alerted
-                  ? "bg-white/90 text-black"
-                  : "bg-black/60 text-white hover:bg-black/80"
+                  ? "bg-white/90 text-black hover:bg-white/70 active:bg-white/60"
+                  : "bg-black/60 text-white hover:bg-black/80 active:bg-black/90"
               )}
             >
-              {alerted ? "🔔 Alerted" : "🔕 Alert me"}
+              {alerted ? "🫵 Receiving Pokes" : "🔔"}
             </button>
           </div>
+
           <div className="flex space-x-2">
             <div className="flex flex-1 flex-col rounded-lg bg-black/60 p-2">
-              <h1 className="text-lg font-semibold text-white">
-                {event.name}
-              </h1>
-              <h2 className="text-sm text-neutral-300">{event.location}</h2>
+              <h1 className="text-lg font-semibold text-white">{event.name}</h1>
+              <h2 className="text-sm text-neutral-300">{formatLocation(event)}</h2>
+              {event.distance && (
+                <span className="mt-1 w-fit rounded-full bg-white/10 px-2 py-0.5 text-xs text-neutral-300">
+                  {event.distance}
+                </span>
+              )}
             </div>
           </div>
+
+          {(event.tags ?? []).length > 0 && (
+            <div className="flex flex-wrap gap-1">
+              {(event.tags ?? []).map(tag => (
+                <span
+                  key={tag}
+                  className="rounded-full bg-black/60 px-2 py-0.5 text-xs text-neutral-300"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+
           {activeRegistration?.closeDate && (
             <div className="rounded-lg bg-black/60 px-3 py-2 text-xs text-neutral-300">
               Closes {new Date(activeRegistration.closeDate).toLocaleDateString([], {
@@ -92,11 +120,10 @@ export default function EventCard({ event }: EventCardProps) {
               })}
             </div>
           )}
+
           <div className="flex items-center justify-between rounded-lg bg-black/75 px-3 py-2">
             <div className="text-sm text-white">
-              {activeRegistration
-                ? activeRegistration.type.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")
-                : "Registration Closed"}
+              {activeRegistration ? formatType(activeRegistration.type) : "Registration Closed"}
             </div>
             <RegistrationStatus registration={activeRegistration} />
           </div>

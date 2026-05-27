@@ -14,14 +14,14 @@ export default function Header() {
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4">
         <Link
           href="/"
-          className="flex w-fit items-end space-x-2 rounded-lg p-1 opacity-100 transition-opacity hover:opacity-70 active:opacity-50"
+          className="flex w-fit items-end space-x-2 rounded-lg p-1 transition-colors hover:bg-neutral-100 active:bg-neutral-200 dark:hover:bg-neutral-800 dark:active:bg-neutral-700"
         >
           <Logo />
         </Link>
         <button
           type="button"
           aria-label="Toggle menu"
-          className="cursor-pointer rounded-lg p-2 text-neutral-600 transition-colors hover:bg-neutral-100 active:bg-neutral-200 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:active:bg-neutral-700"
+          className="cursor-pointer rounded-lg p-2 transition-colors hover:bg-neutral-100 active:bg-neutral-200 dark:hover:bg-neutral-800 dark:active:bg-neutral-700"
           onClick={() => setMenuOpen(o => !o)}
         >
           <MenuIcon />

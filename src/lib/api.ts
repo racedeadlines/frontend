@@ -41,10 +41,15 @@ export type EventRegistrationOption = {
 export type RaceEvent = {
   id: number
   name: string
-  location: string
+  distance: string
+  city: string
+  state: string
+  country: string
+  price: number | null
   url: string
   img: string
   raceDate: string
+  tags: string[]
   registration: EventRegistrationOption[]
 }
 
